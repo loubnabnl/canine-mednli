@@ -1,6 +1,6 @@
 # CANINE for Medical Natural Language Inference on MedNLI data
 
-We are interested in Natural Language Inference (NLI) on medical data using CANINE, pre-trained tokenization-free encoder, that operates directly on character sequences without explicit tokenization and a fixed vocabulary, it is available in this [repo](https://github.com/google-research/language/tree/master/language/canine). We want to predict classify the relation between a hypothesis and a premise as:  Entailement, Contraction or Neutral. We want to perform this task on [MedNLI](https://jgc128.github.io/mednli/), a medical dataset annotated by doctors for NLI. 
+We are interested in Natural Language Inference (NLI) on medical data using CANINE, a pre-trained tokenization-free encoder, that operates directly on character sequences without explicit tokenization and a fixed vocabulary, it is available in this [repo](https://github.com/google-research/language/tree/master/language/canine). We want to predict the relation between a hypothesis and a premise as:  Entailement, Contraction or Neutral. We will perform this task on [MedNLI](https://jgc128.github.io/mednli/), a medical dataset annotated by doctors for NLI. 
 
 ## Setup
 ``` bash
@@ -19,7 +19,7 @@ To use our fine-tuned BERT and CANINE models on MedNLI, you can download the wei
 
 To train a new model on MedNLI you can run the following command
 ```
-python main.py --noisy False --model bert
+python main.py --model canine --noisy False
 ```
 
 ## Noise robustness
@@ -33,5 +33,5 @@ python noisy_data.py --noise_level 0.4
 To train and evaluate CANINE on noisy data, you can run:
 
 ```
-python main.py --noisy True
+python main.py --model canine --noisy True 
 ```
