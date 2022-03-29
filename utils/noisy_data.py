@@ -4,7 +4,7 @@ import argparse
 from data import read_nli_data
 
 def edits(word):
-    """Crete a set of edits that are one edit away from `word`
+    """Create a set of edits that are one edit away from `word`
     source code: https://norvig.com/spell-correct.html
     """
 
