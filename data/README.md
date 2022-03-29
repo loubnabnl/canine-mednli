@@ -1,6 +1,6 @@
 # MedNLI data
 
-Access for the data can be requested here [https://jgc128.github.io/mednli/](https://jgc128.github.io/mednli/). This file must consist of: 
+Access for the data can be requested here [https://jgc128.github.io/mednli/](https://jgc128.github.io/mednli/). This folder must consist of: 
 
 * `mli_train_v1.jsonl` Training set:  11232 premise-hypothesis pairs.
 
