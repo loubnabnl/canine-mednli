@@ -1,6 +1,6 @@
 # CANINE for Medical Natural Language Inference on MedNLI data
 
-We are interested in Natural Language Inference (NLI) on medical data using CANINE, a pre-trained tokenization-free encoder, that operates directly on character sequences without explicit tokenization and a fixed vocabulary, it is available in this [repo](https://github.com/google-research/language/tree/master/language/canine). We want to predict the relation between a hypothesis and a premise as:  Entailement, Contraction or Neutral. We will perform this task on [MedNLI](https://jgc128.github.io/mednli/), a medical dataset annotated by doctors for NLI. 
+We are interested in Natural Language Inference (NLI) on medical data using CANINE, a pre-trained tokenization-free encoder, that operates directly on character sequences without explicit tokenization and a fixed vocabulary, it is available in this [repo](https://github.com/google-research/language/tree/master/language/canine). We want to predict the relation between a hypothesis and a premise as:  Entailement, Contraction or Neutral using [MedNLI](https://jgc128.github.io/mednli/), a medical dataset annotated by doctors for NLI. We will also use BERT.
 
 ## Setup
 ``` bash
@@ -35,3 +35,9 @@ To train and evaluate CANINE on noisy data, you can run:
 ```
 python main.py --model canine --noisy True 
 ```
+
+For the NLI task on clean MedNLI we get an accuracy of 77.6% using BERT and an accuracy of 73.07% using CANINE. However when we add a noise with probability 0.4 to the test data, the performance of BERT drops to 59.92 while the accuarcy of CANINE drops only to 65.75. Training the models on noisy data results in an improvement for both models but CANINE is still preferred to BERT with a 1.4% difference in accuracy. This suggest that CANINE can be more suitable for noisy text than BERT, but for clean data we didn't see and advantadge for CANINE in this task.
+
+To do: 
+ [ ] add table of results nstead of text
+ [ ] check code
