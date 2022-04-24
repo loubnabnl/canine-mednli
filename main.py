@@ -76,7 +76,7 @@ if __name__ =="__main__":
         help="Path to the test data")
     parser.add_argument("--load_model", type=bool, default=False, 
         help="If True load already fine-tuned models")
-    parser.add_argument("--model_path", type=str, default="./trained-models/canine_weights.pth", 
+    parser.add_argument("--model_path", type=str, default="./trained-models/canine_weights.pt", 
         help="Path to save the fine-tuned model to load")
     parser.add_argument("--save_path", type=str, default="./trained-models", 
         help="Path to save the new fine-tuned model")
