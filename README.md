@@ -2,6 +2,8 @@
 
 We are interested in Natural Language Inference (NLI) on medical data using CANINE, a pre-trained tokenization-free encoder, that operates directly on character sequences without explicit tokenization and a fixed vocabulary, it is available in this [repo](https://github.com/google-research/language/tree/master/language/canine). We want to predict the relation between a hypothesis and a premise as:  Entailement, Contraction or Neutral using [MedNLI](https://jgc128.github.io/mednli/), a medical dataset annotated by doctors for NLI. We will also use BERT.
 
+This work is part of a project in the course **Algorithms for speech and natural language processing** at the MVA master program. The repo for the project with more experiments using CANINE for different NLP tasks can be found [here](https://github.com/chloeskt/canine_mva).
+
 ## Setup
 ``` bash
 # Clone this repository
